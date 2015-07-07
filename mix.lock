@@ -1,0 +1,3 @@
+%{"logger_file_backend": {:git, "git://github.com/sean-lin/logger_file_backend.git", "291504765fbbd0e57b14823f48ae801f2d0eb1b5", []},
+  "procket": {:git, "git://github.com/msantos/procket.git", "eddc2d965f9b14abd06677cb2d1cf9c2ee9759ee", [tag: "0.5.1"]},
+  "tunctl": {:git, "git://github.com/msantos/tunctl.git", "3d84df508d04a80b38d38221fa2ee76c804c0624", []}}
