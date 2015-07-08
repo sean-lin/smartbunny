@@ -1,10 +1,29 @@
 defmodule SmartBunny.Tunnel do
+  @siocsifdstaddr 0x8918
+  @ifnamsiz 16
+  @pf_inet 2
+
+  def setup_p2p_addr(dev, {a, b, c, d}=addr) do
+    {:ok, socket} = :procket.socket(:inet, :dgram,  0)
+    IO.inspect(addr)
+    # struct sockaddr_in
+    # dev[IFNAMSIZ], family:2 bytes, port:2 bytes, ipaddr:4 bytes
+    padding = (@ifnamsiz - byte_size(dev) - 1) * 8
+    ifr = <<dev::binary, 0::size(padding), 0::8,
+        @pf_inet::native-16, 0::16, a::8, b::8, c::8, d::8, 0::(8*8)>>
+
+    :ok = :tunctl.ioctl(socket, @siocsifdstaddr, ifr)
+    :ok = :procket.close(socket)
+    :ok
+  end
+
   def make_tunnel(opt) do
     {:ok, dev} = :tuncer.create(opt.name, [:tun, :no_pi, {:active, true}])
+    fd = :tuncer.getfd(dev)
     :ok = :tuncer.up(dev, opt.ip)
+    :ok = setup_p2p_addr(opt.name, opt.remote)
     dev
   end
-  
 end
 
 defmodule SmartBunny.Tunnel.Client do

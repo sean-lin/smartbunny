@@ -27,7 +27,8 @@ config :smart_bunny, [
   mode: :client,  # client | server
   tunnel: %{
     name: "tun0",
-    ip: {10, 0, 0, 1}
+    ip: {10, 0, 0, 1},
+    remote: {10, 0, 0, 2},
   },
   local: [
     %{ 
