@@ -1,3 +1,16 @@
-%{"logger_file_backend": {:git, "git://github.com/sean-lin/logger_file_backend.git", "291504765fbbd0e57b14823f48ae801f2d0eb1b5", []},
+%{"bbmustache": {:hex, :bbmustache, "1.0.1"},
+  "conform": {:hex, :conform, "0.14.5"},
+  "edown": {:git, "git://github.com/dwango/edown.git", "dd1239c1d8669b247ceac83b1654fa55c675d8f3", [branch: "master"]},
+  "erlware_commons": {:hex, :erlware_commons, "0.13.0"},
+  "eunit_formatters": {:git, "git://github.com/seancribbs/eunit_formatters", "2c73eb6e46b0863f19507857b386a48a53aaf141", [branch: "master"]},
+  "exrm": {:hex, :exrm, "0.18.1"},
+  "getopt": {:hex, :getopt, "0.8.2"},
+  "logger_file_backend": {:git, "https://github.com/sean-lin/logger_file_backend.git", "291504765fbbd0e57b14823f48ae801f2d0eb1b5", []},
+  "meck": {:git, "git://github.com/eproxus/meck.git", "dde759050eff19a1a80fd854d7375174b191665d", [tag: "0.8.2"]},
+  "mustache": {:git, "https://github.com/soranoba/mustache.git", "e5401042c66039eef20ee81abc1537ced1f22bc7", [tag: "v0.3.0"]},
+  "neotoma": {:git, "https://github.com/seancribbs/neotoma.git", "6ac6007c7713712a80096de5c7cdf5b85b01374e", []},
   "procket": {:git, "git://github.com/msantos/procket.git", "eddc2d965f9b14abd06677cb2d1cf9c2ee9759ee", [tag: "0.5.1"]},
-  "tunctl": {:git, "git://github.com/msantos/tunctl.git", "3d84df508d04a80b38d38221fa2ee76c804c0624", []}}
+  "providers": {:hex, :providers, "1.4.1"},
+  "reloader": {:git, "git://github.com/sile/reloader.git", "ab13271c015f73a52ab5d01d989f5ea110c272d8", [branch: "master"]},
+  "relx": {:hex, :relx, "3.1.0"},
+  "tunctl": {:git, "https://github.com/msantos/tunctl.git", "3d84df508d04a80b38d38221fa2ee76c804c0624", []}}

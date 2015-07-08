@@ -20,6 +20,9 @@ defmodule SmartBunny.Mixfile do
         :logger,
         :logger_file_backend,
         :inets,
+        :ssl,
+        :crypto,
+        :tunctl,
       ]]
   end
 
@@ -35,7 +38,8 @@ defmodule SmartBunny.Mixfile do
   defp deps do
     [
       {:logger_file_backend, github: "sean-lin/logger_file_backend"},
-      {:tunctl, github: "msantos/tunctl"}
+      {:tunctl, github: "msantos/tunctl"},
+      {:exrm, "~> 0.18.1"},
     ]
   end
 end

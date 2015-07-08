@@ -23,19 +23,20 @@ use Mix.Config
 #
 #     import_config "#{Mix.env}.exs"
 
-config :smartbunny, [
+config :smart_bunny, [
+  mode: :client,  # client | server
   tunnel: %{
     name: "tun0",
-    ip: {127, 0, 1, 1}
+    ip: {10, 0, 0, 1}
   },
   local: [
     %{ 
-      interface: "wlan0",
+      interface: "eth0",
       port: 12306,
     }
   ],
   remote: %{
-    ip: {192, 168, 1, 105},
+    ip: {172, 16, 101, 201},
     port: 12306,
   },
   cookie: "Hi, bunny!",
